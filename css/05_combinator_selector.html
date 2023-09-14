@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 복합 선택자 */
+      /* 1. 하위 선택자 방식 */
+      /* section 아래 ul 태그를 모두 찾음 */
+      section ul {
+        background-color: rgb(147, 193, 193);
+      }
+
+      /* 2. 자식 선택자 방식 */
+      /* section 아래 첫번째 ul */
+      section > ul {
+        background-color: rgb(147, 193, 193);
+      }
+
+      /* 3. 인접 형제 선택자 방식 */
+      p + ul{
+        background-color: rgb(147, 193, 193);
+      }
+
+      /* 4. 일반 형제 선택자 방식 */
+      p~li{
+        background-color: rgb(147, 193, 193);
+      }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>p 테그</p>
+      <ul>
+        <li>list1</li>
+        <ul>
+          <li>list2</li>
+        </ul>
+        <ul>
+          <li>list3</li>
+        </ul>
+      </ul>
+    </section>
+  </body>
+</html>

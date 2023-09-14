@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .header {
+        padding: 60px;
+        text-align: center;
+        background-color: #f9fc63;
+        color: black;
+      }
+
+      .navbar {
+        display: flex;
+        background-color: #333;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+      }
+      .navbar a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .navbar a:hover {
+        background-color: #f9fc63;
+        color: black;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .side {
+        padding: 20px;
+        flex: 30%;
+        background-color: #f1f1f1;
+      }
+
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .main {
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #ddd;
+      }
+
+      @media screen and (max-width=768px) {
+        .row,
+        .navbar {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1 class="header">Who Am I</h1></header>
+    <nav class="navbar">
+      <a href="">menu1</a>
+      <a href="">menu2</a>
+      <a href="">menu3</a>
+      <a href="">menu4</a>
+      <a href="">menu5</a>
+    </nav>
+    <div class="row">
+      <aside class="side">
+        <h2>About</h2>
+        <div class="fakeimg" style="height: 200px">Image</div>
+        <p>건국대 스마트IC융합공학과 23학번 김서진입니다.</p>
+        <h2>Skills</h2>
+        <p>C, Python, Java, JavaScript, React</p>
+        <div class="fakeimg" style="height: 30px">Image</div>
+        <br />
+        <div class="fakeimg" style="height: 30px">Image</div>
+        <br />
+        <div class="fakeimg" style="height: 30px">Image</div>
+      </aside>
+      <main class="main">
+        <section>
+          <h2>프로젝트 1</h2>
+          <h5>2023년 7월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>이 프로젝트는 ~입니다.</p>
+        </section>
+        <section>
+          <h2>프로젝트 2</h2>
+          <h5>2023년 7월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>이 프로젝트는 ~입니다.</p>
+        </section>
+        <section>
+          <h2>프로젝트 3</h2>
+          <h5>2023년 7월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>이 프로젝트는 ~입니다.</p>
+        </section>
+        <section>
+          <h2>프로젝트 4</h2>
+          <h5>2023년 7월</h5>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>이 프로젝트는 ~입니다.</p>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <h3>copyright 김서진</h3>
+    </footer>
+  </body>
+</html>
