@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 이메일 -->
+    <form action="">
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" id="email" />
+      </div>
+      <div>
+        <label for="pw">password</label>
+        <input type="password" id="pw" />
+      </div>
+      <div>
+        <button>로그인</button>
+      </div>
+    </form>
+
+    <br />
+    <!-- checkbox -->
+    <h3>당신이 배우고 싶은 언어는?(중복 가능)</h3>
+    <div>
+      <input type="checkbox" name="ck" id="c1" />
+      <label for="c1">HTML</label>
+      <br />
+      <input type="checkbox" name="ck" id="c2" />
+      <label for="c2">CSS</label>
+      <br />
+      <input type="checkbox" name="ck" id="c3" />
+      <label for="c3">JavaScript</label>
+    </div>
+    <br />
+
+    <!-- radio -->
+    <h3>당신이 배우고 싶은 언어는?(하나만 선택 가능)</h3>
+    <div>
+      <input type="radio" name="rd" id="r1" />
+      <label for="r1">HTML</label>
+      <br />
+      <input type="radio" name="rd" id="r2" />
+      <label for="r2">CSS</label>
+      <br />
+      <input type="radio" name="rd" id="r3" />
+      <label for="r3">JavaScript</label>
+    </div>
+    <br />
+
+    <br />
+    <!-- color -->
+    <div>
+      <label for="c">당신의 최애 색상은?</label>
+      <input type="color" name="color" id="c" />
+    </div>
+
+    <!-- date -->
+    <div>
+      <label for="d">당신의 생일은?</label>
+      <input type="date" name="date" id="d" />
+    </div>
+
+    <!-- date & time -->
+    <div>
+      <label for="arrialDateTime">입국한 날짜 및 시간은?</label>
+      <input type="datetime-local" name="" id="" />
+    </div>
+
+    <br />
+
+    <!-- email, submit button -->
+    <form action="">
+      <label for="userEmail">이메일</label>
+      <input type="email" name="" id="userEmail" />
+      <button type="submit">save</button>
+    </form>
+  </body>
+
+  <br />
+  <!-- file -->
+  <div>
+    <label for="attachment">파일 첨부</label>
+    <input type="file" id="attachment" />
+  </div>
+
+  <div>
+    <label for="">전화번호</label>
+    <input type="tel" />
+  </div>
+
+  <div>
+    <label for="">개수</label>
+    <input type="number" min="0" max="100" />
+  </div>
+</html>

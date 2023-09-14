@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 이벤트 핸들러 -->
+    <button onclick="alert('clicked')">click1</button>
+    <button onclick="submitted()">submit</button>
+    <button id="btn">click2</button>
+    <button id="btn2">click3</button>
+
+    <script>
+      function submitted() {
+        alert("submitted");
+      }
+
+      const b = document.getElementById("btn");
+      b.onclick = submitted;
+      //   sumbitted 다음에 ()가 없어야 반환값이 안들어감
+
+      const b2 = doucment.getElementById("btn2");
+      document.addEventListener
+    </script>
+  </body>
+</html>

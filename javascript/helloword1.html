@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // // 숫자
+      // alert(1 + 1); //=2
+
+      // // 문자
+      // alert("1" + "1"); //=11
+
+      //------------------------------------------------------------
+
+      //if-else문
+      // if (true) {
+      //   alert("true");
+      // } else {
+      //   alert("false");
+      // }
+
+      // num = prompt("당신의 나이는?");
+      // if (num >= 20) {
+      //   alert("성인입니다.");
+      // } else {
+      //   alert("학생입니다.");
+      // }
+
+      //while문
+      // num = 1;
+      // while (num <= 10) {
+      //   document.write(num);
+      //   num++;
+      // }
+      // //for문
+      // for (i = 0; i < 10; i++) {
+      //   document.write(i);
+      // }
+
+      //------------------------------------------------------------
+
+      //함수
+      // function hello() {
+      //   for (i = 0; i < 10; i++) {
+      //     document.write("hello<br/> ");
+      //   }
+      // }
+
+      // hello();
+
+      //------------------------------------------------------------
+      // //배열
+      // member = ["abc", "123", "098"];
+      // document.write(member);
+
+      // document.write("<br />");
+
+      // document.write(member[0]); //abc
+      // document.write(member[1]); //123
+      // document.write(member[2]); //098
+
+      // document.write("<br />");
+
+      //함수 & 배열
+      function getMembers() {
+        return ["abc", "123", "098"];
+      }
+      mem = getMembers();
+      document.write(mem[0]);
+      document.write(mem[1]);
+      document.write(mem[2]);
+
+      //배열 push -> 1개 추가할때
+      mem.push("f");
+      document.write(mem[3]);
+
+      document.write("<br />");
+
+      li = [0, 1, 2, 3, 4];
+      li.push(5);
+      document.write(li);
+
+      document.write("<br />");
+
+      //배열 concat -> 여러개 추가할때
+      li = li.concat([6, 7]);
+      document.write(li); //0,1,2,3,4,5,6,7
+
+      document.write("<br />");
+
+      //배열 unshift -> 배열 첫지점에 요소 추가
+      li.unshift(-1);
+      document.write(li); //-1, 0,1,2,3,4,5,6,7
+
+      document.write("<br />");
+
+      //배열 shift -> 배열 첫지점 요소 삭제
+      li.shift();
+      document.write(li); //0,1,2,3,4,5,6,7
+
+      document.write("<br />");
+
+      //배열 pop -> 배열 마지막 지점 요소 삭제
+      li.pop();
+      document.write(li); //0,1,2,3,4,5,6
+
+      document.write("<br />");
+
+      //------------------------------------------------------
+      //객체(파이썬의 딕셔너리와 같음)
+      var obj = { hello: "world", 1: 10, apple: "banana" };
+      document.write([obj["hello"]]); //world
+
+      document.write("<br />");
+      4;
+
+      var obj2 = { 1: "a", 2: "b", 3: "c" };
+      document.write([obj2[1]]); //a
+
+      document.write("<br />");
+
+      //객체 반복문
+      for (var key in obj2) {
+        document.write("<li>" + key + ":" + obj2[key] + "</li>");
+      }
+
+      //객체지향
+      //1. 객체 안에 객체
+      var grades = {
+        Kim: { math: 90, english: 80, bio: 85 },
+      };
+      document.write(grades["Kim"]["math"] + "<br />"); //90
+      //grades 객체 안에, Kim 키 안에, math 키 값
+
+      //2. 객체 안에 함수
+      // var adr = {
+      //   Hello: function () {
+      //     alert("hello world");
+      //   },
+      // };
+      // adr.Hello();
+
+      //3. this 변수
+      //grades2 안에서 사용되는 this는 grades2를 가리킴
+      var grades2 = {
+        Kim: { math: 90, english: 80, bio: 85 },
+        show: function () {
+          for (var i in this.Kim) {
+            document.write(i + ":" + this.Kim[i] + "<br />");
+          }
+        },
+      };
+      grades2.show();
+
+  
+      
+    </script>
+  </body>
+</html>

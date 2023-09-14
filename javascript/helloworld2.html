@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="greetings.js"></script>
+  </head>
+  <body>
+    <script>
+      //모듈
+      document.write(welcome());
+      document.write("<br />");
+
+      //객체 생성
+      var person = {
+        name: "Seojin",
+        introduce: function () {
+          return "My name is " + this.name;
+        },
+      };
+      document.write(person.introduce()); //꼭 () 붙여야 함!
+
+      //생성자 -> JS는 객체를 함수로 만듦
+      function Person(name) {
+        var n = name;
+        var intro = function () {
+          return "My name is " + n;
+        };
+      }
+
+      var p1 = new Person("Kim");
+      var p1 = new Person("Park");
+
+      document.write(p1.intro() + "<br/>");
+      document.write(p2.intro() + "<br/>");
+
+      //상속
+      function Animal(name) {
+        var n = name;
+      }
+      Animal.prototype.name = null;
+      Animal.prototype.intro = function () {
+        return "I'm " + this.name;
+      };
+
+      function onLand(name) {
+        this.name = name;
+      }
+      onLand.prototype = new Animal();
+      onLand.prototype.bark = function () {
+        return "woof";
+      };
+
+      function inWater(name) {
+        this.name = name;
+      }
+      inWater.prototype = new Animal();
+      inWater.prototype.swim = function () {
+        return "splash";
+      };
+
+      var an1 = new onLand("George");
+      document.write(an1.intro() + "<b/>");
+      document.write(an1.bark() + "<b/>");
+
+      var an2 = new inWater("George");
+      document.write(an1.intro() + "<b/>");
+      document.write(an1.swim() + "<b/>");
+    </script>
+  </body>
+</html>
